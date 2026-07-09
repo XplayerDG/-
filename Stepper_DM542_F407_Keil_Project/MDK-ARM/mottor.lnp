@@ -1,0 +1,11 @@
+--cpu=Cortex-M4.fp.sp
+".\startup_stm32f407xx.o"
+".\main.o"
+".\board.o"
+".\stepper.o"
+".\usart.o"
+".\system_stm32f407_min.o"
+--strict --scatter ".\mottor.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\mottor.map" -o .\mottor.axf
